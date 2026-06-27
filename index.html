@@ -159,7 +159,7 @@
   #mode-toggle svg {
     width: 20px;
     height: 20px;
-    fill: currentColor;
+    display: block;
   }
   [data-theme="animated"] #mode-toggle {
     display: none;
@@ -286,7 +286,7 @@
   </div>
   <div class="header-actions">
     <button id="mode-toggle" aria-label="Toggle light/dark mode">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM22 12a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1ZM3 12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2h1Zm15.071-5.657a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0ZM7.05 16.95a1 1 0 0 1 0 1.414l-.707.707a1 1 0 0 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0Zm9.9 0a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM7.05 7.05a1 1 0 0 1-1.414 0L4.93 6.343a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414Z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
     </button>
     <button id="theme-toggle">Switch to Animated</button>
   </div>
@@ -347,9 +347,9 @@
 
     function syncModeIcon(mode) {
       if (mode === 'dark') {
-        modeBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 11-8-8 8 8 0 008 8z"/></svg>';
+        modeBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
       } else {
-        modeBtn.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM22 12a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1ZM3 12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2h1Zm15.071-5.657a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0ZM7.05 16.95a1 1 0 0 1 0 1.414l-.707.707a1 1 0 0 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0Zm9.9 0a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414ZM7.05 7.05a1 1 0 0 1-1.414 0L4.93 6.343a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414Z"/></svg>';
+        modeBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
       }
     }
 
