@@ -2,7 +2,7 @@
 
 **🔗 https://projects-portal-beta.vercel.app**
 
-내 GitHub 프로젝트(LADDER, open-survivor, TikaTuka)를 한 페이지에서 빠르게 접속할 수 있는 포털 페이지입니다.
+제 GitHub 프로젝트(LADDER, open-survivor, TikaTuka)를 한 페이지에서 빠르게 접속할 수 있는 포털 페이지입니다.
 
 ## 포함된 프로젝트
 
