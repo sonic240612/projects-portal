@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Projects</title>
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --card-border: 1px solid #e8ecf1;
+    --text: #1a1a2e;
+    --text-secondary: #555;
+    --accent: #4361ee;
+    --accent-hover: #3a56d4;
+    --header-bg: rgba(255,255,255,0.8);
+    --toggle-bg: #e8ecf1;
+    --toggle-color: #333;
+    --particles: none;
+    --glow: none;
+  }
+  .theme-animated {
+    --bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    --card-bg: rgba(255,255,255,0.06);
+    --card-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    --card-border: 1px solid rgba(255,255,255,0.10);
+    --text: #f0f0ff;
+    --text-secondary: #b0b0d0;
+    --accent: #7c5cfc;
+    --accent-hover: #9b7fff;
+    --header-bg: rgba(15,12,41,0.7);
+    --toggle-bg: rgba(255,255,255,0.10);
+    --toggle-color: #f0f0ff;
+    --particles: block;
+    --glow: 0 0 30px rgba(124,92,252,0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: background 0.6s ease, color 0.4s ease;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  #particles {
+    display: var(--particles);
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .particle {
+    position: absolute;
+    width: 4px; height: 4px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    animation: float linear infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+  }
+  .particle:nth-child(1) { left: 10%; width: 3px; height: 3px; animation-duration: 12s; animation-delay: 0s; }
+  .particle:nth-child(2) { left: 25%; width: 5px; height: 5px; animation-duration: 18s; animation-delay: 2s; }
+  .particle:nth-child(3) { left: 40%; width: 2px; height: 2px; animation-duration: 14s; animation-delay: 5s; }
+  .particle:nth-child(4) { left: 55%; width: 4px; height: 4px; animation-duration: 20s; animation-delay: 1s; }
+  .particle:nth-child(5) { left: 70%; width: 3px; height: 3px; animation-duration: 16s; animation-delay: 7s; }
+  .particle:nth-child(6) { left: 85%; width: 5px; height: 5px; animation-duration: 22s; animation-delay: 3s; }
+  .particle:nth-child(7) { left: 50%; width: 2px; height: 2px; animation-duration: 15s; animation-delay: 9s; }
+  .particle:nth-child(8) { left: 15%; width: 4px; height: 4px; animation-duration: 19s; animation-delay: 4s; }
+  .particle:nth-child(9) { left: 65%; width: 3px; height: 3px; animation-duration: 13s; animation-delay: 6s; }
+  .particle:nth-child(10) { left: 90%; width: 5px; height: 5px; animation-duration: 17s; animation-delay: 8s; }
+  .particle:nth-child(11) { left: 35%; width: 2px; height: 2px; animation-duration: 21s; animation-delay: 2s; }
+  .particle:nth-child(12) { left: 75%; width: 4px; height: 4px; animation-duration: 14s; animation-delay: 5s; }
+
+  header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: var(--header-bg);
+    border-bottom: var(--card-border);
+    transition: background 0.5s ease, border 0.4s ease;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  #theme-toggle {
+    position: relative;
+    z-index: 2;
+    appearance: none;
+    border: var(--card-border);
+    background: var(--toggle-bg);
+    color: var(--toggle-color);
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+  }
+  #theme-toggle:hover {
+    transform: scale(1.04);
+    box-shadow: var(--glow);
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 0 24px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--card-shadow), var(--glow);
+    border-color: var(--accent);
+  }
+  .card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+  .card .desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .card .links {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+  }
+  .card .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+  }
+  .theme-simple .card .links a:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+  .theme-animated .card .links a:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(124,92,252,0.35);
+  }
+  .card .links a svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
+    header h1 { font-size: 1.2rem; }
+    main { margin-top: 32px; gap: 20px; padding: 0 16px 40px; }
+    .card { padding: 24px 20px; }
+    .card h2 { font-size: 1.25rem; }
+  }
+</style>
+</head>
+<body class="theme-simple">
+<div id="particles">
+  <div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+</div>
+
+<header>
+  <h1>My Projects</h1>
+  <button id="theme-toggle">Switch to Animated</button>
+</header>
+
+<main>
+  <div class="card">
+    <h2>LADDER</h2>
+    <p class="desc">사다리 타기 게임</p>
+    <div class="links">
+      <a href="https://github.com/sonic240612/LADDER" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a href="https://ladder-roulette.vercel.app" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zm11-3v9l-3.5-3.5-5.5 5.5-2-2 5.5-5.5L12 3h9z"/></svg>
+        Live
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>open-survivor</h2>
+    <p class="desc">뱀서류 생존 게임</p>
+    <div class="links">
+      <a href="https://github.com/sonic240612/open-survivor" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a href="https://open-survivor.vercel.app" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zm11-3v9l-3.5-3.5-5.5 5.5-2-2 5.5-5.5L12 3h9z"/></svg>
+        Live
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>TikaTuka</h2>
+    <p class="desc">주사위 보드게임</p>
+    <div class="links">
+      <a href="https://github.com/sonic240612/TikaTuka" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a href="https://tikatuka-one.vercel.app" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zm11-3v9l-3.5-3.5-5.5 5.5-2-2 5.5-5.5L12 3h9z"/></svg>
+        Live
+      </a>
+    </div>
+  </div>
+</main>
+
+<script>
+  (function() {
+    const body = document.body;
+    const btn = document.getElementById('theme-toggle');
+
+    function setTheme(theme) {
+      body.className = theme;
+      btn.textContent = theme === 'theme-simple' ? 'Switch to Animated' : 'Switch to Simple';
+      try { localStorage.setItem('projects-portal-theme', theme); } catch {}
+    }
+
+    btn.addEventListener('click', function() {
+      const next = body.className === 'theme-simple' ? 'theme-animated' : 'theme-simple';
+      setTheme(next);
+    });
+
+    try {
+      const saved = localStorage.getItem('projects-portal-theme');
+      if (saved === 'theme-simple' || saved === 'theme-animated') {
+        setTheme(saved);
+      }
+    } catch {}
+  })();
+</script>
+</body>
+</html>
