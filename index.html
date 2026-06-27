@@ -20,7 +20,20 @@
     --particles: none;
     --glow: none;
   }
-  .theme-animated {
+  [data-theme="simple"][data-mode="dark"] {
+    --bg: #12121e;
+    --card-bg: #1e1e32;
+    --card-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    --card-border: 1px solid #2e2e4a;
+    --text: #e0e0ee;
+    --text-secondary: #8888aa;
+    --accent: #6b8cff;
+    --accent-hover: #8ba8ff;
+    --header-bg: rgba(18,18,30,0.88);
+    --toggle-bg: #2a2a44;
+    --toggle-color: #e0e0ee;
+  }
+  [data-theme="animated"] {
     --bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     --card-bg: rgba(255,255,255,0.06);
     --card-shadow: 0 8px 32px rgba(0,0,0,0.3);
@@ -98,6 +111,38 @@
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  #mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: var(--card-border);
+    background: var(--toggle-bg);
+    color: var(--toggle-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    flex-shrink: 0;
+  }
+  #mode-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: var(--glow);
+  }
+  #mode-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  [data-theme="animated"] #mode-toggle {
+    display: none;
   }
   #theme-toggle {
     position: relative;
@@ -177,11 +222,11 @@
     color: var(--accent);
     background: transparent;
   }
-  .theme-simple .card .links a:hover {
+  [data-theme="simple"] .card .links a:hover {
     background: var(--accent);
     color: #fff;
   }
-  .theme-animated .card .links a:hover {
+  [data-theme="animated"] .card .links a:hover {
     background: var(--accent);
     color: #fff;
     box-shadow: 0 0 20px rgba(124,92,252,0.35);
@@ -202,7 +247,7 @@
   }
 </style>
 </head>
-<body class="theme-simple">
+<body data-theme="simple" data-mode="light">
 <div id="particles">
   <div class="particle"></div><div class="particle"></div>
   <div class="particle"></div><div class="particle"></div>
@@ -214,7 +259,12 @@
 
 <header>
   <h1>My Projects</h1>
-  <button id="theme-toggle">Switch to Animated</button>
+  <div class="header-actions">
+    <button id="mode-toggle" aria-label="Toggle light/dark mode">
+      <svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm0 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm10-6a1 1 0 110 2h-1a1 1 0 110-2h1zM3 12a1 1 0 110 2H2a1 1 0 110-2h1zm15.07-6.07a1 1 0 010 1.41l-.7.7a1 1 0 11-1.42-1.4l.7-.71a1 1 0 011.42 0zM5.64 16.93a1 1 0 010 1.41l-.7.7a1 1 0 01-1.42-1.4l.7-.71a1 1 0 011.42 0zM19 12a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </button>
+    <button id="theme-toggle">Switch to Animated</button>
+  </div>
 </header>
 
 <main>
@@ -267,23 +317,47 @@
 <script>
   (function() {
     const body = document.body;
-    const btn = document.getElementById('theme-toggle');
+    const themeBtn = document.getElementById('theme-toggle');
+    const modeBtn = document.getElementById('mode-toggle');
+
+    function syncModeIcon(mode) {
+      if (mode === 'dark') {
+        modeBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 11-8-8 8 8 0 008 8z"/></svg>';
+      } else {
+        modeBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm0 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm10-6a1 1 0 110 2h-1a1 1 0 110-2h1zM3 12a1 1 0 110 2H2a1 1 0 110-2h1zm15.07-6.07a1 1 0 010 1.41l-.7.7a1 1 0 11-1.42-1.4l.7-.71a1 1 0 011.42 0zM5.64 16.93a1 1 0 010 1.41l-.7.7a1 1 0 01-1.42-1.4l.7-.71a1 1 0 011.42 0zM19 12a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>';
+      }
+    }
 
     function setTheme(theme) {
-      body.className = theme;
-      btn.textContent = theme === 'theme-simple' ? 'Switch to Animated' : 'Switch to Simple';
+      body.setAttribute('data-theme', theme);
+      themeBtn.textContent = theme === 'simple' ? 'Switch to Animated' : 'Switch to Simple';
       try { localStorage.setItem('projects-portal-theme', theme); } catch {}
     }
 
-    btn.addEventListener('click', function() {
-      const next = body.className === 'theme-simple' ? 'theme-animated' : 'theme-simple';
-      setTheme(next);
+    function setMode(mode) {
+      body.setAttribute('data-mode', mode);
+      syncModeIcon(mode);
+      try { localStorage.setItem('projects-portal-mode', mode); } catch {}
+    }
+
+    themeBtn.addEventListener('click', function() {
+      const cur = body.getAttribute('data-theme');
+      setTheme(cur === 'simple' ? 'animated' : 'simple');
+    });
+
+    modeBtn.addEventListener('click', function() {
+      const cur = body.getAttribute('data-mode') || 'light';
+      setMode(cur === 'light' ? 'dark' : 'light');
     });
 
     try {
-      const saved = localStorage.getItem('projects-portal-theme');
-      if (saved === 'theme-simple' || saved === 'theme-animated') {
-        setTheme(saved);
+      const savedTheme = localStorage.getItem('projects-portal-theme');
+      if (savedTheme === 'simple' || savedTheme === 'animated') {
+        setTheme(savedTheme);
+      }
+      const savedMode = localStorage.getItem('projects-portal-mode');
+      if (savedMode === 'light' || savedMode === 'dark') {
+        setMode(savedMode);
       }
     } catch {}
   })();
