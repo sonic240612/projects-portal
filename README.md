@@ -2,7 +2,7 @@
 
 **🔗 https://projects-portal-beta.vercel.app**
 
-제가 만든 서비스들(LADDER, open-survivor, TikaTuka, HueWorld, zen_pebble, whereto, pixel-circle)을 한 번에 확인할 수 있는 포털 페이지입니다.
+제가 만든 서비스들을 한 번에 확인할 수 있는 포털 페이지입니다.
 
 ## 포함된 프로젝트
 
