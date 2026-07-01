@@ -2,7 +2,7 @@
 
 **🔗 https://projects-portal-beta.vercel.app**
 
-제가 만든 서비스들(LADDER, open-survivor, TikaTuka, HueWorld, zen_pebble)을 한 번에 확인할 수 있는 포털 페이지입니다.
+제가 만든 서비스들(LADDER, open-survivor, TikaTuka, HueWorld, zen_pebble, whereto)을 한 번에 확인할 수 있는 포털 페이지입니다.
 
 ## 포함된 프로젝트
 
@@ -12,7 +12,8 @@
 | open-survivor | 뱀서류 생존 게임 | [바로가기](https://github.com/sonic240612/open-survivor) | [바로가기](https://open-survivor.vercel.app) |
 | TikaTuka | 주사위 보드게임 | [바로가기](https://github.com/sonic240612/TikaTuka) | [바로가기](https://tikatuka-one.vercel.app) |
 | HueWorld | 실시간 글로벌 무드 맵 | [바로가기](https://github.com/sonic240612/HueWorld) | [바로가기](https://hueworld.vercel.app) |
-| zen_pebble | 디지털 인내심 테스트 | [바로가기](https://github.com/sonic240612/zen_pebble) | [바로가기](https://zen-pebble.vercel.app) |
+| zen_pebble | 디지털 디톡스 & 인내심 테스트 | [바로가기](https://github.com/sonic240612/zen_pebble) | [바로가기](https://zen-pebble.vercel.app) |
+| whereto | 랜덤 장소 추천 서비스 | [바로가기](https://github.com/sonic240612/whereto) | 준비 중 |
 
 ## 기능
 
