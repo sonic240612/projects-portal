@@ -15,6 +15,7 @@
 | zen_pebble | 디지털 디톡스 & 인내심 테스트 | [바로가기](https://github.com/sonic240612/zen_pebble) | [바로가기](https://zen-pebble.vercel.app) |
 | whereto | 랜덤 장소 추천 서비스 | [바로가기](https://github.com/sonic240612/whereto) | [바로가기](https://whereto-swart.vercel.app) |
 | PixelCircle | 픽셀 아트용 정밀 픽셀 원형 생성기 | [바로가기](https://github.com/sonic240612/pixel-circle) | [바로가기](https://pixel-circle.vercel.app) |
+| Apex Button | 실시간 버튼 클릭 경쟁 서비스 | [바로가기](https://github.com/sonic240612/apex-button) | [바로가기](https://apex-button.vercel.app) |
 
 ## 기능
 
