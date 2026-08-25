@@ -534,7 +534,7 @@
       setMode(cur === 'light' ? 'dark' : 'light');
     });
 
-    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabBtns = document.querySelectorAll('.tab-btn[data-category]');
     const cards = document.querySelectorAll('.card');
 
     function applyCategory(cat) {
