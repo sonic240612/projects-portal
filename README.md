@@ -26,6 +26,15 @@
 | 어디가?(WhereTo?) | 랜덤 장소 추천 서비스 | [바로가기](https://github.com/sonic240612/whereto) | [바로가기](https://whereto-swart.vercel.app) |
 | PixelCircle | 픽셀 아트용 정밀 픽셀 원형 생성기 | [바로가기](https://github.com/sonic240612/pixel-circle) | [바로가기](https://pixel-circle.vercel.app) |
 
+## Lab
+
+AI 에이전트와 협업 방식을 탐구하는 실험적 프로젝트
+
+| 프로젝트 | 설명 | GitHub |
+|----------|------|--------|
+| Lodex | 로컬 LLM과 OpenRouter를 연결하는 데스크톱 AI 에이전트 | [바로가기](https://github.com/sonic240612/Lodex) |
+| hand-in-hand | 여러 사람이 하나의 Codex 세션을 이어가는 협업 프로토타입 | [바로가기](https://github.com/sonic240612/hand-in-hand) |
+
 ## Life
 
 일상과 생산성 프로젝트
@@ -38,7 +47,7 @@
 
 ## 기능
 
-- **카테고리 탭** — All / Playground / Tools / Life로 프로젝트 분류
+- **카테고리 탭** — All / Playground / Tools / Lab / Life로 프로젝트 분류
 - **정렬** — Newest / Oldest 버튼으로 최신순·오래된 순 정렬
 - **Simple 테마** — Light / Dark 모드 전환 지원
 - **Animated 테마** — 파티클 효과와 함께하는 다크 스타일
