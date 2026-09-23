@@ -2,7 +2,7 @@
 
 **🔗 https://projects-portal-beta.vercel.app**
 
-프로젝트와 대회 참여 기록을 한 번에 확인할 수 있는 포털 페이지입니다.
+제가 만든 서비스들을 한 번에 확인할 수 있는 포털 페이지입니다.
 
 ## Playground
 
@@ -45,15 +45,9 @@ AI 에이전트와 협업 방식을 탐구하는 실험적 프로젝트
 | zen_pebble | 디지털 디톡스 & 인내심 테스트 | [바로가기](https://github.com/sonic240612/zen_pebble) | [바로가기](https://zen-pebble.vercel.app) |
 | Focus Forest | Pomodoro 타이머 & 스케줄 플래너 | [바로가기](https://github.com/sonic240612/Focus-Forest) | [바로가기](https://focus-forest-jet.vercel.app) |
 
-## Competitions
-
-| 대회 | 주제 | 순위 |
-|------|------|------|
-| 2026 국립공원 위성 모니터링 AI 챌린지 | 산사태 붕괴지 탐지 및 위험도 분석 | 2 / 81 |
-
 ## 기능
 
-- **카테고리 탭** — All / Playground / Tools / Lab / Life / Competitions로 분류
+- **카테고리 탭** — All / Playground / Tools / Lab / Life로 프로젝트 분류
 - **정렬** — Newest / Oldest 버튼으로 최신순·오래된 순 정렬
 - **Simple 테마** — Light / Dark 모드 전환 지원
 - **Animated 테마** — 파티클 효과와 함께하는 다크 스타일

@@ -342,7 +342,6 @@
   <button class="tab-btn" data-category="tools">Tools</button>
   <button class="tab-btn" data-category="lab">Lab</button>
   <button class="tab-btn" data-category="life">Life</button>
-  <button class="tab-btn" data-category="competitions">Competitions</button>
   <span class="tabs-divider" aria-hidden="true"></span>
   <button class="tab-btn sort-btn" id="sort-newest">Newest</button>
   <button class="tab-btn sort-btn" id="sort-oldest">Oldest</button>
@@ -525,11 +524,6 @@
     <h2>Mars Panic!!!</h2>
     <p class="desc">비공개 프로젝트</p>
   </div>
-
-  <div class="card" data-category="competitions" data-date="2026-09-21">
-    <h2>2026 국립공원 위성 모니터링 AI 챌린지</h2>
-    <p class="desc">산사태 붕괴지 탐지 및 위험도 분석 · 2 / 81</p>
-  </div>
 </main>
 <script>
   (function() {
@@ -616,7 +610,7 @@
         setMode(savedMode);
       }
       const savedCategory = localStorage.getItem('projects-portal-category');
-      if (savedCategory && ['all', 'playground', 'tools', 'lab', 'life', 'competitions'].indexOf(savedCategory) !== -1) {
+      if (savedCategory && ['all', 'playground', 'tools', 'lab', 'life'].indexOf(savedCategory) !== -1) {
         applyCategory(savedCategory);
       }
       applySort(localStorage.getItem('projects-portal-sort') === 'oldest' ? 'oldest' : 'newest');
