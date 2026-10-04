@@ -13,7 +13,6 @@
 | open-survivor | 뱀서류 생존 게임 | [바로가기](https://github.com/sonic240612/open-survivor) | [바로가기](https://open-survivor.vercel.app) |
 | LADDER | 사다리 타기 게임 | [바로가기](https://github.com/sonic240612/LADDER) | [바로가기](https://ladder-roulette.vercel.app) |
 | TikaTuka | 주사위 보드게임 | [바로가기](https://github.com/sonic240612/TikaTuka) | [바로가기](https://tikatuka-one.vercel.app) |
-| Apex Button | 실시간 버튼 클릭 경쟁 서비스 | [바로가기](https://github.com/sonic240612/apex-button) | [바로가기](https://apex-button.vercel.app) |
 | Mars Panic!!! | 비공개 프로젝트 | - | - |
 | iF | AI 캐릭터 채팅 & 인터랙티브 스토리텔링 플랫폼 | [바로가기](https://github.com/sonic240612/iF) | [바로가기](https://if-chat-plum.vercel.app) |
 
