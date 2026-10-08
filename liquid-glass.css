@@ -4,6 +4,8 @@
 .glass-filter-defs { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
 
 [data-theme="liquid-glass"] {
+  /* Keep the negative-z wallpaper above the page canvas, behind the content. */
+  isolation: isolate;
   overflow-anchor: none;
   --bg: #f2f3f5;
   --text: #17191d;
@@ -45,7 +47,8 @@
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  /* Safari excludes negative-z full-viewport backgrounds from its solid toolbar tint sampling. */
+  z-index: -1;
   background: #d6e6f7 url('glass-wallpaper.svg') center top / cover no-repeat;
 }
 [data-theme="liquid-glass"][data-mode="dark"] .glass-scene {
