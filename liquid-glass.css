@@ -107,7 +107,7 @@
 [data-theme="liquid-glass"] [data-liquid-surface].is-pressing::after { opacity: 1; }
 [data-theme="liquid-glass"] header {
   position: sticky;
-  top: 18px;
+  top: calc(18px + var(--safe-area-top));
   z-index: 20;
   width: calc(100% - 64px);
   max-width: 1120px;
@@ -147,7 +147,7 @@
 .glass-intro .intro-desc { margin-top: 14px; font-size: .91rem; line-height: 1.7; color: var(--text-secondary); word-break: keep-all; }
 [data-theme="liquid-glass"] .tabs {
   position: sticky;
-  top: 90px;
+  top: calc(90px + var(--safe-area-top));
   z-index: 15;
   width: calc(100% - 64px);
   max-width: 1120px;
@@ -253,7 +253,7 @@
 }
 @media (max-width: 640px) {
   [data-theme="liquid-glass"] .header-actions { margin-left: auto; }
-  [data-theme="liquid-glass"] header { width: calc(100% - 32px); top: 12px; margin-top: 16px; flex-wrap: nowrap; gap: 8px; }
+  [data-theme="liquid-glass"] header { width: calc(100% - 32px); top: calc(12px + var(--safe-area-top)); margin-top: 16px; flex-wrap: nowrap; gap: 8px; }
   [data-theme="liquid-glass"] header .title-area { padding: 13px; gap: 8px; }
   [data-theme="liquid-glass"] header h1 { font-size: .83rem; white-space: nowrap; }
   [data-theme="liquid-glass"] header .title-area svg { width: 17px; height: 17px; }
@@ -262,7 +262,7 @@
   [data-theme="liquid-glass"] :is(#mode-toggle,#motion-toggle) { width: 44px; height: 44px; }
   [data-theme="liquid-glass"] .glass-intro { margin: 40px 22px 25px; padding: 0; }
   .glass-intro .intro-desc { font-size: .81rem; }
-  [data-theme="liquid-glass"] .tabs { top: 71px; width: calc(100% - 32px); flex-wrap: wrap; gap: 12px; }
+  [data-theme="liquid-glass"] .tabs { top: calc(71px + var(--safe-area-top)); width: calc(100% - 32px); flex-wrap: wrap; gap: 12px; }
   [data-theme="liquid-glass"] .category-control { width: 100%; justify-content: space-between; }
   [data-theme="liquid-glass"] .category-control .tab-btn { flex: 1; min-width: 0; padding-inline: 5px; font-size: .61rem; min-height: 56px; }
   [data-theme="liquid-glass"] .sort-control { margin-left: auto; }

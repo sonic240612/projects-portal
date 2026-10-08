@@ -2,10 +2,14 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>My Projects</title>
 <style>
   :root {
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
     --bg: #f5f7fa;
     --card-bg: #ffffff;
     --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -54,6 +58,9 @@
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
+    min-height: 100dvh;
+    /* Keep content inside device cutouts, with bottom clearance only at the end of the page. */
+    padding: var(--safe-area-top) var(--safe-area-right) var(--safe-area-bottom) var(--safe-area-left);
     transition: background 0.6s ease, color 0.4s ease;
     position: relative;
     overflow-x: hidden;
@@ -322,6 +329,17 @@
 <script src="liquid-glass-ui.js" defer></script>
 </head>
 <body data-theme="liquid-glass" data-mode="light" data-liquid-motion="full">
+<script>
+  // Resolve the initial mode before rendering visible content, without saving an automatic choice.
+  (function() {
+    let savedMode = null;
+    try { savedMode = localStorage.getItem('projects-portal-mode'); } catch {}
+    const prefersDark = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const mode = savedMode === 'light' || savedMode === 'dark' ? savedMode : (prefersDark ? 'dark' : 'light');
+    document.body.dataset.mode = mode;
+    document.body.style.colorScheme = mode;
+  })();
+</script>
 <div class="glass-scene" aria-hidden="true"></div>
 <div id="particles" aria-hidden="true">
   <div class="particle"></div><div class="particle"></div>
@@ -596,10 +614,12 @@
       body.style.colorScheme = mode;
     }
 
-    function setMode(mode) {
+    function setMode(mode, persist = true) {
       body.setAttribute('data-mode', mode);
       syncModeControl();
-      try { localStorage.setItem('projects-portal-mode', mode); } catch {}
+      if (persist) {
+        try { localStorage.setItem('projects-portal-mode', mode); } catch {}
+      }
     }
 
     themeBtn.addEventListener('click', function() {
@@ -712,10 +732,9 @@
     sortOldestBtn.addEventListener('click', function() { applySort('oldest'); });
 
     const savedTheme = readPreference('theme');
-    const savedMode = readPreference('mode');
     const savedCategory = readPreference('category');
     setTheme(themes.includes(savedTheme) ? savedTheme : 'liquid-glass');
-    setMode(savedMode === 'dark' ? 'dark' : 'light');
+    setMode(body.dataset.mode, false);
     applyCategory(['all', 'playground', 'tools', 'lab', 'life'].includes(savedCategory) ? savedCategory : 'all');
     applySort(readPreference('sort') === 'oldest' ? 'oldest' : 'newest');
   })();
