@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Mars Panic — a red planet on alert</title>
+  <defs><linearGradient id="mars-bg" x2=".8" y2="1"><stop stop-color="#643362"/><stop offset="1" stop-color="#251d43"/></linearGradient><linearGradient id="mars-planet" x1=".15" y1=".1" x2=".85" y2=".9"><stop stop-color="#ffc27b"/><stop offset=".55" stop-color="#ed7551"/><stop offset="1" stop-color="#b4353e"/></linearGradient><clipPath id="mars-disc"><circle cx="59" cy="70" r="34"/></clipPath></defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#mars-bg)"/>
+  <rect x="3" y="3" width="122" height="122" rx="28" fill="none" stroke="#fff" stroke-opacity=".28"/>
+  <g fill="#fff1dc"><circle cx="25" cy="29" r="2"/><circle cx="103" cy="97" r="2"/><circle cx="41" cy="17" r="1"/></g>
+  <circle cx="59" cy="70" r="34" fill="url(#mars-planet)"/>
+  <g clip-path="url(#mars-disc)" fill="#a7353d"><ellipse cx="36" cy="83" rx="15" ry="8" opacity=".3"/><ellipse cx="69" cy="48" rx="12" ry="7" opacity=".28"/><circle cx="71" cy="85" r="6" opacity=".22"/><path d="M18 70q43 20 86-8v50H18Z" opacity=".12"/></g>
+  <path d="M17 78c-10 22 28 33 68 5 13-9 23-22 21-29" fill="none" stroke="#ffc58c" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+  <path d="m96 20 17 28a5 5 0 0 1-4 8H76a5 5 0 0 1-4-8l16-28a5 5 0 0 1 8 0Z" fill="#ffe4a5"/><path d="M92 31v10" stroke="#a4493a" stroke-width="4" stroke-linecap="round"/><circle cx="92" cy="48" r="2.3" fill="#a4493a"/>
+</svg>

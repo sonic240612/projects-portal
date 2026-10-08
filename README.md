@@ -50,4 +50,13 @@ AI 에이전트와 협업 방식을 탐구하는 실험적 프로젝트
 - **정렬** — Newest / Oldest 버튼으로 최신순·오래된 순 정렬
 - **Simple 테마** — Light / Dark 모드 전환 지원
 - **Animated 테마** — 파티클 효과와 함께하는 다크 스타일
-- 테마·카테고리·정렬 상태는 `localStorage`에 저장되어 유지됨
+- **Liquid Glass 테마** — Apple의 조작 계층/콘텐츠 계층 구분을 참고한 웹 구현. 배경을 실제로 굴절시키는 캡슐, 미세한 색분산, 포인터 반사광, 눌림에 반응하는 광학 두께, 스프링으로 움직이는 드래그 가능한 선택 렌즈를 제공하며 Light / Dark 모드 지원
+- **모션 제어** — 상단 반짝임 버튼으로 모션을 켜거나 끌 수 있음. 처음에는 시스템의 움직임 줄이기 설정을 따르며, 직접 선택한 설정은 이 사이트에서만 적용
+- **프로젝트 아이콘** — Liquid Glass 카드에 프로젝트별 SVG 아이콘 표시. Lodex 원본 앱 아이콘과 hand-in-hand의 기존 브랜드 마크를 사용하고 나머지 10개는 서비스 성격에 맞춰 제작
+- **디자인 전환** — 상단 모드 버튼 오른쪽에서 Animated → Simple → Liquid Glass 순환 전환. 기존 디자인 선택도 유지
+- **접근성** — 키보드 포커스, 움직임·투명도 줄이기 설정, 배경 흐림 미지원 브라우저의 대체 배경 지원
+- 테마·카테고리·정렬·모션 상태는 `localStorage`에 저장되어 유지됨
+
+Liquid Glass는 Apple의 네이티브 렌더러가 아닌 웹 재현입니다. Chromium에서는 SVG 변위 필터로 실제 배경 굴절을 적용하고, Safari·Firefox 등에서는 CSS 배경 흐림과 반사광으로 대체합니다. 모션을 끄면 정적인 유리 표현을 유지하고, 투명도 감소·고대비 설정에서는 불투명한 배경으로 대체합니다. 외부 라이브러리 없이 구현했으며 스프링이 정착하면 애니메이션 계산도 멈춥니다.
+
+디자인 참고: [Meet Liquid Glass (WWDC25)](https://developer.apple.com/videos/play/wwdc2025/219/), [Apple HIG — Materials](https://developer.apple.com/design/human-interface-guidelines/materials).

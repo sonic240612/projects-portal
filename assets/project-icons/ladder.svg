@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">LADDER — follow the lucky route</title>
+  <defs><linearGradient id="ladder-bg" x2=".85" y2="1"><stop stop-color="#8c96ee"/><stop offset="1" stop-color="#4b4bac"/></linearGradient><linearGradient id="ladder-path" x2=".3" y2="1"><stop stop-color="#fff1b8"/><stop offset="1" stop-color="#ffd174"/></linearGradient></defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#ladder-bg)"/>
+  <rect x="3" y="3" width="122" height="122" rx="28" fill="none" stroke="#fff" stroke-opacity=".4"/>
+  <g fill="none" stroke="#e9eaff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 28v72M64 28v72M96 28v72" opacity=".6"/><path d="M32 44h32m0 23h32M32 84h32" opacity=".6"/></g>
+  <path d="M32 27v17h32v23h32v30" fill="none" stroke="#32357f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".15" transform="translate(0 3)"/>
+  <path d="M32 27v17h32v23h32v30" fill="none" stroke="url(#ladder-path)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="27" r="7" fill="#fff5cc"/><path d="m96 89 3.4 6.8 7.6 1.1-5.5 5.3 1.3 7.5-6.8-3.5-6.8 3.5 1.3-7.5-5.5-5.3 7.6-1.1Z" fill="#ffdd90"/>
+</svg>

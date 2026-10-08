@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="hw-title">
+  <title id="hw-title">HueWorld — a globe connected by colorful moods</title>
+  <defs>
+    <linearGradient id="hw-bg" x1="18" y1="5" x2="111" y2="124" gradientUnits="userSpaceOnUse"><stop stop-color="#8AE5E3"/><stop offset=".48" stop-color="#36B6BF"/><stop offset="1" stop-color="#197183"/></linearGradient>
+    <linearGradient id="hw-globe" x1="44" y1="32" x2="84" y2="97" gradientUnits="userSpaceOnUse"><stop stop-color="#DDFFF8" stop-opacity=".9"/><stop offset="1" stop-color="#BAF2EB" stop-opacity=".45"/></linearGradient>
+    <linearGradient id="hw-rim" x1="64" y1="2" x2="64" y2="126" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF" stop-opacity=".8"/><stop offset=".5" stop-color="#FFF" stop-opacity=".12"/><stop offset="1" stop-color="#FFF" stop-opacity=".3"/></linearGradient>
+  </defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#hw-bg)"/>
+  <ellipse cx="64" cy="64" rx="49" ry="22" transform="rotate(-32 64 64)" fill="none" stroke="#D8FFFC" stroke-width="2" opacity=".3"/>
+  <circle cx="64" cy="64" r="33" fill="url(#hw-globe)"/>
+  <circle cx="64" cy="64" r="33" fill="none" stroke="#E9FFFC" stroke-width="2" opacity=".8"/>
+  <ellipse cx="64" cy="64" rx="15" ry="33" fill="none" stroke="#3FA4AA" stroke-width="2.5" opacity=".7"/>
+  <path d="M34 51h60M31 65h66M35 79h58M64 31v66" fill="none" stroke="#3FA4AA" stroke-width="2.5" opacity=".7"/>
+  <path d="M24 85c8 11 33 7 58-8 12-7 23-16 29-24" fill="none" stroke="#E9FFFC" stroke-width="2.5" stroke-linecap="round" opacity=".85"/>
+  <circle cx="27" cy="82" r="9" fill="#FFCD88"/>
+  <path d="M23 81a4 4 0 0 1 4-4" fill="none" stroke="#FFF2D8" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+  <circle cx="99" cy="46" r="9" fill="#F5A7C1"/>
+  <path d="M95 45a4 4 0 0 1 4-4" fill="none" stroke="#FFE3ED" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+  <circle cx="53" cy="103" r="5" fill="#B9BAF8"/>
+  <circle cx="35" cy="28" r="4" fill="#D9F4A6"/>
+  <rect x="2.75" y="2.75" width="122.5" height="122.5" rx="28.25" fill="none" stroke="url(#hw-rim)" stroke-width="1.5"/>
+</svg>

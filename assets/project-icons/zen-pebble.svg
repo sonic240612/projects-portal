@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="zp-title">
+  <title id="zp-title">ZenPebble — three balanced river stones</title>
+  <defs>
+    <linearGradient id="zp-bg" x1="14" y1="4" x2="109" y2="125" gradientUnits="userSpaceOnUse"><stop stop-color="#F3E9D6"/><stop offset=".5" stop-color="#CFBFA8"/><stop offset="1" stop-color="#9D8C7A"/></linearGradient>
+    <linearGradient id="zp-low" x1="47" y1="77" x2="79" y2="105" gradientUnits="userSpaceOnUse"><stop stop-color="#9B9F96"/><stop offset="1" stop-color="#555F5B"/></linearGradient>
+    <linearGradient id="zp-mid" x1="54" y1="56" x2="74" y2="81" gradientUnits="userSpaceOnUse"><stop stop-color="#C3C9BD"/><stop offset="1" stop-color="#808B80"/></linearGradient>
+    <linearGradient id="zp-top" x1="54" y1="33" x2="73" y2="61" gradientUnits="userSpaceOnUse"><stop stop-color="#F4F4DF"/><stop offset="1" stop-color="#B5BFA8"/></linearGradient>
+    <linearGradient id="zp-rim" x1="64" y1="2" x2="64" y2="126" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF" stop-opacity=".82"/><stop offset=".5" stop-color="#FFF" stop-opacity=".12"/><stop offset="1" stop-color="#FFF" stop-opacity=".32"/></linearGradient>
+  </defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#zp-bg)"/>
+  <circle cx="90" cy="32" r="12" fill="#FFF8D8" opacity=".42"/>
+  <ellipse cx="64" cy="105" rx="41" ry="5" fill="#675B4E" opacity=".14"/>
+  <path d="M24 92c0-9 17-17 39-17 22 0 41 8 41 18 0 9-17 12-40 12-24 0-40-4-40-13Z" fill="url(#zp-low)"/>
+  <path d="M35 88c13-7 39-8 58 1" fill="none" stroke="#D8DBCE" stroke-width="2" stroke-linecap="round" opacity=".38"/>
+  <path d="M37 69c0-8 12-15 26-15 15 0 29 8 29 16 0 9-14 11-27 11-17 0-28-4-28-12Z" fill="url(#zp-mid)"/>
+  <path d="M44 66c9-6 21-7 33-3" fill="none" stroke="#F0F0DE" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+  <path d="M48 45c0-8 8-15 16-15 9 0 17 8 17 17 0 8-9 11-18 11-10 0-15-4-15-13Z" fill="url(#zp-top)"/>
+  <path d="M54 42c2-5 6-7 11-7" fill="none" stroke="#FFFDEB" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+  <path d="M29 47c-2-8 0-15 6-21 3 9 0 17-6 21Z" fill="#78946C" opacity=".75"/>
+  <path d="m29 46 5-15" stroke="#5D7B55" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="2.75" y="2.75" width="122.5" height="122.5" rx="28.25" fill="none" stroke="url(#zp-rim)" stroke-width="1.5"/>
+</svg>

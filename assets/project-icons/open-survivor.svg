@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">open-survivor — survive the swarm</title>
+  <defs><linearGradient id="survivor-bg" x2=".7" y2="1"><stop stop-color="#47746a"/><stop offset="1" stop-color="#142f35"/></linearGradient><linearGradient id="survivor-shield" x2=".5" y2="1"><stop stop-color="#e6fca9"/><stop offset="1" stop-color="#91c179"/></linearGradient></defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#survivor-bg)"/>
+  <rect x="3" y="3" width="122" height="122" rx="28" fill="none" stroke="#fff" stroke-opacity=".3"/>
+  <circle cx="64" cy="66" r="42" fill="none" stroke="#c7f2a0" stroke-opacity=".18" stroke-width="1.5" stroke-dasharray="3 6"/>
+  <path d="m64 28 29 12v27c0 20-29 36-29 36S35 87 35 67V40Z" fill="#0e242b" opacity=".3" transform="translate(0 4)"/>
+  <path d="m64 25 29 12v27c0 20-29 36-29 36S35 84 35 64V37Z" fill="url(#survivor-shield)"/><path d="m64 31 23 10v23c0 14-17 27-23 31Z" fill="#f1ffc4" opacity=".35"/>
+  <path d="M57 40h14v8h8v25H49V48h8Z" fill="#2a5150"/><path d="M53 55h22v8H53Z" fill="#f0ffc8"/><path d="M62 54h4v16h-4Z" fill="#2a5150"/>
+  <g fill="#f2b489"><path d="M16 44h7v7h-7zm84 27h8v8h-8zM28 94h6v6h-6z"/><path d="m104 21 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/></g>
+</svg>

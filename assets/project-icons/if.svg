@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">iF — stories through conversation</title>
+  <defs><linearGradient id="if-bg" x2=".8" y2="1"><stop stop-color="#f27caf"/><stop offset="1" stop-color="#96265f"/></linearGradient><linearGradient id="if-glass" x2=".4" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#ffd3e8"/></linearGradient></defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#if-bg)"/>
+  <rect x="3" y="3" width="122" height="122" rx="28" fill="none" stroke="#fff" stroke-opacity=".38"/>
+  <path d="M51 45h43a14 14 0 0 1 14 14v21a14 14 0 0 1-14 14h-4v13L75 94H51a14 14 0 0 1-14-14V59a14 14 0 0 1 14-14Z" fill="#6e1745" opacity=".23"/>
+  <path d="M35 29h45a16 16 0 0 1 16 16v25a16 16 0 0 1-16 16H55L34 101V86a16 16 0 0 1-15-16V45a16 16 0 0 1 16-16Z" fill="url(#if-glass)"/>
+  <path d="m59 41 5 11 12 5-12 5-5 12-5-12-12-5 12-5Z" fill="#bd457c"/>
+  <path d="m94 21 2.5 6.5L103 30l-6.5 2.5L94 39l-2.5-6.5L85 30l6.5-2.5Z" fill="#ffe0a6"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="ff-title">
+  <title id="ff-title">FocusForest — a growing tree and focus timer</title>
+  <defs>
+    <linearGradient id="ff-bg" x1="18" y1="8" x2="111" y2="124" gradientUnits="userSpaceOnUse"><stop stop-color="#82E4A4"/><stop offset=".48" stop-color="#28A979"/><stop offset="1" stop-color="#12634F"/></linearGradient>
+    <linearGradient id="ff-leaf" x1="46" y1="25" x2="77" y2="86" gradientUnits="userSpaceOnUse"><stop stop-color="#F4FFD7"/><stop offset="1" stop-color="#BCF09B"/></linearGradient>
+    <linearGradient id="ff-rim" x1="64" y1="2" x2="64" y2="126" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF" stop-opacity=".78"/><stop offset=".5" stop-color="#FFF" stop-opacity=".12"/><stop offset="1" stop-color="#FFF" stop-opacity=".28"/></linearGradient>
+  </defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#ff-bg)"/>
+  <path d="M15 48C18 21 38 10 63 9" fill="none" stroke="#D9FFE5" stroke-width="2" opacity=".24"/>
+  <ellipse cx="64" cy="98" rx="24" ry="5" fill="#044D39" opacity=".2"/>
+  <path d="M86 33a40 40 0 1 1-39-5" fill="none" stroke="#D3FFE2" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+  <circle cx="87" cy="33" r="4" fill="#FFFDE5"/>
+  <path d="M64 28c-2.3 0-4 1.9-5.2 3.7L44 53.3c-1.5 2.3.1 5.2 2.8 5.2h4.4L39.7 75.4c-1.7 2.4 0 5.6 2.9 5.6h42.8c2.9 0 4.6-3.2 2.9-5.6L76.8 58.5h4.4c2.7 0 4.3-2.9 2.8-5.2L69.2 31.7C68 29.9 66.3 28 64 28Z" fill="#075E44" opacity=".13" transform="translate(0 3)"/>
+  <path d="M64 28c-2.3 0-4 1.9-5.2 3.7L44 53.3c-1.5 2.3.1 5.2 2.8 5.2h4.4L39.7 75.4c-1.7 2.4 0 5.6 2.9 5.6h42.8c2.9 0 4.6-3.2 2.9-5.6L76.8 58.5h4.4c2.7 0 4.3-2.9 2.8-5.2L69.2 31.7C68 29.9 66.3 28 64 28Z" fill="url(#ff-leaf)"/>
+  <path d="M64 43v49" stroke="#FFFADE" stroke-width="6" stroke-linecap="round"/>
+  <path d="m53 61 11 9 11-9" fill="none" stroke="#5CAF65" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+  <rect x="2.75" y="2.75" width="122.5" height="122.5" rx="28.25" fill="none" stroke="url(#ff-rim)" stroke-width="1.5"/>
+</svg>

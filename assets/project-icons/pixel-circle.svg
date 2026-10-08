@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="pc-title">
+  <title id="pc-title">PixelCircle — a circle constructed from square pixels</title>
+  <defs>
+    <linearGradient id="pc-bg" x1="17" y1="8" x2="114" y2="122" gradientUnits="userSpaceOnUse"><stop stop-color="#B2BCFF"/><stop offset=".48" stop-color="#7582E8"/><stop offset="1" stop-color="#4546A7"/></linearGradient>
+    <linearGradient id="pc-pixels" x1="45" y1="25" x2="81" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF"/><stop offset="1" stop-color="#D8E4FF"/></linearGradient>
+    <linearGradient id="pc-rim" x1="64" y1="2" x2="64" y2="126" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF" stop-opacity=".78"/><stop offset=".5" stop-color="#FFF" stop-opacity=".12"/><stop offset="1" stop-color="#FFF" stop-opacity=".3"/></linearGradient>
+    <pattern id="pc-grid" x="4" y="4" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 12V0h12" fill="none" stroke="#EEF0FF" stroke-width=".7" opacity=".1"/></pattern>
+  </defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#pc-bg)"/>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#pc-grid)"/>
+  <path d="M49 25h10v10H49Zm12 0h10v10H61Zm12 0h10v10H73ZM37 37h10v10H37Zm48 0h10v10H85ZM25 49h10v10H25Zm72 0h10v10H97ZM25 61h10v10H25Zm72 0h10v10H97ZM25 73h10v10H25Zm72 0h10v10H97ZM37 85h10v10H37Zm48 0h10v10H85ZM49 97h10v10H49Zm12 0h10v10H61Zm12 0h10v10H73Z" fill="#30377C" opacity=".22" transform="translate(-2 1)"/>
+  <path d="M47 23h10v10H47Zm12 0h10v10H59Zm12 0h10v10H71ZM35 35h10v10H35Zm48 0h10v10H83ZM23 47h10v10H23Zm72 0h10v10H95ZM23 59h10v10H23Zm72 0h10v10H95ZM23 71h10v10H23Zm72 0h10v10H95ZM35 83h10v10H35Zm48 0h10v10H83ZM47 95h10v10H47Zm12 0h10v10H59Zm12 0h10v10H71Z" fill="url(#pc-pixels)"/>
+  <rect x="59" y="59" width="10" height="10" fill="#BBCFFF" opacity=".5"/>
+  <rect x="83" y="23" width="10" height="10" fill="#D6F9FF" opacity=".32"/>
+  <rect x="95" y="35" width="10" height="10" fill="#D6F9FF" opacity=".16"/>
+  <rect x="2.75" y="2.75" width="122.5" height="122.5" rx="28.25" fill="none" stroke="url(#pc-rim)" stroke-width="1.5"/>
+</svg>

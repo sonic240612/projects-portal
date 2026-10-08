@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">hand-in-hand — connected in both directions</title>
+  <defs><linearGradient id="hand-bg" x2=".8" y2="1"><stop stop-color="#fcfffc"/><stop offset="1" stop-color="#dcebe0"/></linearGradient><linearGradient id="hand-mark" x2=".4" y2="1"><stop stop-color="#287757"/><stop offset="1" stop-color="#1e6045"/></linearGradient></defs>
+  <rect x="2" y="2" width="124" height="124" rx="29" fill="url(#hand-bg)"/>
+  <rect x="3" y="3" width="122" height="122" rx="28" fill="none" stroke="#fff" stroke-opacity=".9"/>
+  <g transform="rotate(-27 64 64)" fill="none" stroke="url(#hand-mark)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M28 64h72M44 48 28 64l16 16M84 48l16 16-16 16"/></g>
+</svg>
