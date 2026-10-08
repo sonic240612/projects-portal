@@ -320,7 +320,7 @@
 <script src="liquid-glass.js" defer></script>
 <script src="liquid-glass-ui.js" defer></script>
 </head>
-<body data-theme="liquid-glass" data-mode="light">
+<body data-theme="liquid-glass" data-mode="light" data-liquid-motion="full">
 <div class="glass-scene" aria-hidden="true"></div>
 <div id="particles" aria-hidden="true">
   <div class="particle"></div><div class="particle"></div>
@@ -339,7 +339,7 @@
     </a>
   </div>
   <div class="header-actions">
-    <button id="motion-toggle" data-liquid-surface type="button" aria-label="모션 효과 켜기" aria-pressed="false" title="모션 효과 켜기">
+    <button id="motion-toggle" data-liquid-surface type="button" aria-label="모션 효과 끄기" aria-pressed="true" title="모션 효과 켜짐 · 클릭하여 끄기">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4Z"/><path d="M20 2v4m-2-2h4"/></svg>
     </button>
     <button id="mode-toggle" data-liquid-surface aria-label="Toggle light/dark mode">
@@ -550,10 +550,10 @@
       try { return localStorage.getItem('projects-portal-' + key); } catch { return null; }
     }
     const motionBtn = document.getElementById('motion-toggle');
-    const motionQuery = matchMedia('(prefers-reduced-motion: reduce)');
-    let motionPreference = readPreference('motion') || 'system';
+    // Effects start enabled; only an explicit site-level opt-out disables them.
+    let motionPreference = readPreference('motion') === 'reduced' ? 'reduced' : 'full';
     function syncMotionPreference() {
-      const enabled = motionPreference === 'full' || (motionPreference !== 'reduced' && !motionQuery.matches);
+      const enabled = motionPreference === 'full';
       body.dataset.liquidMotion = enabled ? 'full' : 'reduced';
       motionBtn.setAttribute('aria-pressed', String(enabled));
       motionBtn.setAttribute('aria-label', enabled ? '모션 효과 끄기' : '모션 효과 켜기');
@@ -564,7 +564,6 @@
       try { localStorage.setItem('projects-portal-motion', motionPreference); } catch {}
       syncMotionPreference();
     });
-    motionQuery.addEventListener('change', syncMotionPreference);
     syncMotionPreference();
 
     function syncModeIcon(mode) {
