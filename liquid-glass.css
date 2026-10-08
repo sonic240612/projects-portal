@@ -62,6 +62,18 @@
   background: linear-gradient(0deg, var(--bg), transparent 85%);
   opacity: .5;
 }
+/* iOS anchors fixed elements inside Safari's visible viewport, not behind its chrome.
+   Overscan only the decorative wallpaper; leave content and safe-area spacing alone.
+   A stable large-viewport height also avoids rescaling as the address bar collapses. */
+@supports (-webkit-touch-callout: none) {
+  [data-theme="liquid-glass"] .glass-scene {
+    inset: -25vh 0 auto;
+    height: 150vh;
+    top: -25lvh;
+    height: 150lvh;
+    background-position: center;
+  }
+}
 [data-theme="liquid-glass"] [data-liquid-surface] {
   --pointer-x: 50%;
   --pointer-y: 0%;
