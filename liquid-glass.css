@@ -121,8 +121,8 @@
 }
 [data-theme="liquid-glass"] header .title-area { gap: 14px; padding: 15px 20px; }
 [data-theme="liquid-glass"] header h1 { font-size: 1rem; font-weight: 650; letter-spacing: -0.035em; }
-[data-theme="liquid-glass"] header .title-area a { color: var(--text); }
-[data-theme="liquid-glass"] header .title-area a svg { width: 19px; height: 19px; }
+[data-theme="liquid-glass"] header .title-area { cursor: pointer; }
+[data-theme="liquid-glass"] header .title-area svg { color: var(--text); width: 19px; height: 19px; }
 [data-theme="liquid-glass"] .header-actions { gap: 10px; }
 [data-theme="liquid-glass"] :is(#motion-toggle, #mode-toggle, #theme-toggle) {
   background: transparent;
@@ -256,7 +256,7 @@
   [data-theme="liquid-glass"] header { width: calc(100% - 32px); top: 12px; margin-top: 16px; flex-wrap: nowrap; gap: 8px; }
   [data-theme="liquid-glass"] header .title-area { padding: 13px; gap: 8px; }
   [data-theme="liquid-glass"] header h1 { font-size: .83rem; white-space: nowrap; }
-  [data-theme="liquid-glass"] header .title-area a svg { width: 17px; height: 17px; }
+  [data-theme="liquid-glass"] header .title-area svg { width: 17px; height: 17px; }
   [data-theme="liquid-glass"] .header-actions { gap: 7px; }
   [data-theme="liquid-glass"] #theme-toggle { min-width: 133px; height: 44px; padding: 10px 12px; font-size: .72rem; gap: 8px; }
   [data-theme="liquid-glass"] :is(#mode-toggle,#motion-toggle) { width: 44px; height: 44px; }
