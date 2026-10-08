@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2000" fill="none" preserveAspectRatio="none">
+  <!-- Mirror the original wallpaper vertically to repeat without a color seam.
+       Keep the artwork in sync with glass-wallpaper.svg. Inline it because SVG
+       images used as CSS backgrounds cannot load external image resources. -->
+  <defs>
+    <linearGradient id="sky" x1="180" y1="0" x2="1320" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#edf3ff"/><stop offset=".48" stop-color="#b5d7f7"/><stop offset="1" stop-color="#f8d4bd"/></linearGradient>
+    <linearGradient id="blue" x1="450" y1="50" x2="980" y2="800" gradientUnits="userSpaceOnUse"><stop stop-color="#a9dcff"/><stop offset=".5" stop-color="#4e8dd9"/><stop offset="1" stop-color="#315cba"/></linearGradient>
+    <linearGradient id="ice" x1="50" y1="320" x2="1350" y2="490" gradientUnits="userSpaceOnUse"><stop stop-color="#b2e7fb"/><stop offset=".55" stop-color="#d8e9fb"/><stop offset="1" stop-color="#7eabdc"/></linearGradient>
+    <linearGradient id="pearl" x1="200" y1="180" x2="1350" y2="700" gradientUnits="userSpaceOnUse"><stop stop-color="#f9f8f6"/><stop offset=".55" stop-color="#dddff7"/><stop offset="1" stop-color="#b9b6ea"/></linearGradient>
+    <clipPath id="bounds"><path d="M0 0h1600v1000H0z"/></clipPath>
+    <g id="art" clip-path="url(#bounds)">
+      <path fill="url(#sky)" d="M0 0h1600v1000H0z"/>
+      <path fill="url(#blue)" d="M550-100C570 150 136 115 76 332S460 500 574 686s-52 313-85 414h1240V-100Z"/>
+      <path stroke="#244d9e" stroke-opacity=".3" stroke-width="2" d="M565-80C576 146 153 124 95 332S472 504 590 686s-48 290-72 384"/>
+      <path fill="url(#ice)" d="M850-110C840 188 263 175 250 380s640 134 698 364-326 318-302 380h1054V-110Z"/>
+      <path stroke="#f5fcff" stroke-opacity=".8" stroke-width="3" d="M850-110C840 188 263 175 250 380s640 134 698 364-326 318-302 380"/>
+      <path fill="url(#pearl)" d="M1230-80c-164 279-723 292-716 468s676 68 723 285-213 341-135 431h618V-80Z"/>
+      <path stroke="#ffffff" stroke-opacity=".75" stroke-width="2" d="M1227-80c-164 279-723 292-716 468s676 68 723 285-213 341-135 431"/>
+      <path stroke="#5b73b2" stroke-opacity=".2" stroke-width="1.5" d="M1266-60C1137 216 551 209 553 391s684 70 727 283-209 331-154 427"/>
+      <path fill="#ffe5ce" fill-opacity=".65" d="M1550 56c-84 215-569 337-517 455s447 29 465 273-90 210-96 290h268V0Z"/>
+      <path stroke="#fff" stroke-opacity=".6" stroke-width="2" d="M1550 56c-84 215-569 337-517 455s447 29 465 273-90 210-96 290"/>
+    </g>
+  </defs>
+  <use href="#art"/>
+  <use href="#art" transform="translate(0 2000) scale(1 -1)"/>
+</svg>

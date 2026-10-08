@@ -62,16 +62,28 @@
   background: linear-gradient(0deg, var(--bg), transparent 85%);
   opacity: .5;
 }
-/* iOS anchors fixed elements inside Safari's visible viewport, not behind its chrome.
-   Overscan only the decorative wallpaper; leave content and safe-area spacing alone.
-   A stable large-viewport height also avoids rescaling as the address bar collapses. */
+/* Safari clips fixed layers at its browser controls, even when they overscan.
+   Paint iOS wallpaper on the root canvas instead, so it belongs to the scrolling
+   document behind Safari's chrome. The mirrored tile has no hard repeat seam.
+   Do not use background-attachment: fixed here; it has the same iOS limitation. */
 @supports (-webkit-touch-callout: none) {
+  :root:has(body[data-theme="liquid-glass"]) {
+    background: #d6e6f7 url('glass-wallpaper-scroll.svg') center top / max(100%, 160vh) 200vh repeat-y scroll;
+    background-size: max(100%, 160lvh) 200lvh;
+    color-scheme: light;
+  }
+  :root:has(body[data-theme="liquid-glass"][data-mode="dark"]) {
+    background-color: #182d53;
+    background-blend-mode: multiply;
+    color-scheme: dark;
+  }
+  body[data-theme="liquid-glass"] {
+    background: transparent;
+    /* Avoid briefly covering the root wallpaper when switching themes. */
+    transition: color .4s ease;
+  }
   [data-theme="liquid-glass"] .glass-scene {
-    inset: -25vh 0 auto;
-    height: 150vh;
-    top: -25lvh;
-    height: 150lvh;
-    background-position: center;
+    display: none;
   }
 }
 [data-theme="liquid-glass"] [data-liquid-surface] {
