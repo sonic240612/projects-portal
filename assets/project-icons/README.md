@@ -21,5 +21,6 @@ Liquid Glass 카드 전용 SVG 아이콘입니다. Animated·Simple 디자인에
 | `tikatuka.svg` | 두 개의 주사위 |
 | `ladder.svg` | 사다리 타기의 선택 경로 |
 | `open-survivor.svg` | 생존을 상징하는 방패와 픽셀 투구 |
+| `beatsync.svg` | 헤드폰과 음악 이퀄라이저 비트 파형 |
 
 새 아이콘은 128×128 viewBox의 벡터로 제작했습니다. 외부 폰트·이미지·스크립트에 의존하지 않으며, 각 파일을 독립적으로 사용할 수 있습니다. 색상과 카드 연결은 `index.html`의 `artwork` 설정에서 관리합니다.
